@@ -3,6 +3,9 @@
 @import './rental-home';
 
 
+html, body {
+    height: 100%;
+  }
 .navbar-dark .navbar-nav {
   .nav-link {
     &:hover {
@@ -10,6 +13,9 @@
     }
   }
 }
+.bwm-container {
+    padding-top: 70px;
+  }
 
 .btn {
   &.btn-bwm-main {

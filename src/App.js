@@ -1,14 +1,23 @@
-
 import React from 'react';
 import Header from './components/shared/Header';
-import HomeStream from './pages/HomeStream';
-// Explaining how everyhing works (:
+import Routes from './Routes';
+
+import { BrowserRouter as Router } from "react-router-dom";
+// import Provider from './store/Provider';
+import { Provider } from 'react-redux'
+
+import { initStore } from './store';
+
+const store = initStore();
 const App = () => {
+
   return (
-    <div>
-      <Header />
-      <HomeStream/>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Header />
+        <Routes />
+      </Router>
+    </Provider>
   )
 }
 
